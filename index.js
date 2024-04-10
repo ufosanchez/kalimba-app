@@ -15,7 +15,10 @@ window.onload = function (){
     resetRecord.onclick = resetMusic;
 
     keys.forEach(key => {
-        key.addEventListener("click", () => playNote(key))
+        key.addEventListener("click", () => {
+            playNote(key);
+            recordedKeys.push(key)
+        })
     });
 
     document.addEventListener("keydown", e => {
