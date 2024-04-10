@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Mina:wght@400;700&display=swap');
+
+:root {
+    --yellow: #ffb703;
+    --brown-light: #F0EBE4;
+    --turquoise: #0077b6;
+    --turquoise2: #48cae4;
+    --brown: #d69f7e;
+    --gray: #D9D9D9;
+    --dark-gray: #6c757d;
+    --label: #535353;
+}
+
+html {
+    box-sizing:border-box;
+    font-family: "Mina", sans-serif;
+}
+
+*, *::before, *::after {
+    box-sizing:inherit;
+}
+
+body {
+    margin:0;
+}
+
+.main-padding{
+    padding: 5px;
+}
+
+/* 2. HEADER STYLES */
+
+#header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url("../images/mask-group.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 2px solid black;
+}
+
+.main-logo{
+    width: 100px;
+    height: auto;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    column-gap: 1.625em;
+}
+
+.menu a{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu a:hover{
+    color: white
+}
+
+/* --- Index --- */
+
+main {
+    min-height: calc(100vh - 55px);
+    position: relative;
+}
+
+main::before {
+    content: ''; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/mask-group.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5; 
+    z-index: -1; 
+}
+
+/* 3. DEVICE */
+
+#instrument{
+    width: 450px;
+    margin: 0 auto;
+}
+
+#title-kalimbax{
+    text-align: center;
+    margin: 0;
+    padding: 0.5em 0;
+}
+
+.kalimbax-times{
+    border: 2px solid black;
+    padding: 1em;
+    padding-bottom: 5em;
+    border-radius: 10px 10px 30% 30%;
+    background-color: var(--brown);
+}
+
+.play-stop{
+    padding: 0.2em 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-family: "Mina", sans-serif;
+    background-color: rgba(217, 217, 217, 0.5);
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.play-music{
+    color: #52b788;
+    text-shadow: 0 0 3px #000;
+}
+
+.reset-music{
+    color: #d00000;
+    text-shadow: 0 0 3px #000;
+}
+
+.fa-stop, .fa-upload, .fa-gear{
+    padding-left: 10px;
+}
+
+.display-kalimbax{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 21px;
+}
+
+.button-device{
+    width: 85px;
+    height: auto;
+}
+
+label{
+    font-size: 13px;
+    color: var(--label);
+    height: 20px;
+}
+
+.input{
+    font-family: "Mina", sans-serif;
+    font-size: 16px;
+    width: 50px;
+    background-color: var(--gray);
+    border-radius: 8px;
+    border: 1px solid ;
+    box-shadow: inset 0px 2px 2px 0px rgba(0, 0, 0, 0.7);
+}
+
+.sustain{
+    padding-bottom: 1em;
+}
+
+.instrument-scale{
+    width: 162px;
+    height: 36px;
+    border: 2px solid black;
+    border-radius: 50px;
+    text-align: center;
+    font-family: "Mina", sans-serif;
+    font-size: 16px;
+    background-color: rgba(217, 217, 217, 0.5);
+    box-shadow: inset 0px 2px 2px 0px rgba(0, 0, 0, 0.7);
+}
+
+.root-note{
+    width: 60px;
+}
+
+.instrument-root{
+    width: 100%;
+    height: 36px;
+    border: 2px solid black;
+    border-radius: 50px;
+    text-align: center;
+    font-family: "Mina", sans-serif;
+    font-size: 16px;
+    background-color: rgba(217, 217, 217, 0.5);
+    box-shadow: inset 0px 2px 2px 0px rgba(0, 0, 0, 0.7);
+}
+
+/* 4. TOGGLE */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 47px;
+    height: 27px;
+}
+
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #D9D9D9;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border: 2px solid black;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 2px;
+    background-color: #6A6A6A;
+    -webkit-transition: .4s;
+    transition: .4s;
+    box-shadow: inset 0 0 0 2px #000;
+}
+
+input:checked + .slider {
+    background-color: #52b788;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #52b788;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(16px);
+    -ms-transform: translateX(16px);
+    transform: translateX(16px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* 5. INSTRUMENT TIMES */
+
+.kalimbax-times-device{
+    display: flex;
+    gap: 10px;
+}
+
+.kalimbax-times-device > .kalimba{
+    height: 200px;
+    flex: 1;
+    background-color: var(--gray);
+    border: 2px solid black;
+    border-radius: 10px 10px 30px 30px;
+}
+
+/* TIMES KALIMBA */
+
+.kalimba {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.kalimba > div{
+    flex-basis: 90%;
+    padding-top: 115px;
+    margin-bottom: 40px;
+    background-image: linear-gradient(0deg, var(--dark-gray), var(--gray));
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+}
+
+/* 6. SIZES TIMES */
+
+#lamellas-2, #lamellas-8{
+    height: 250px;
+}
+
+#lamellas-3, #lamellas-7{
+    height: 300px;
+}
+
+#lamellas-4, #lamellas-6{
+    height: 350px;
+}
+
+#lamellas-5{
+    height: 400px;
+}
+
+.vibrando {
+    animation: vibracion 0.3s ease infinite alternate;
+}
+
+/* MEDIA QUERIES */
+
+@keyframes vibracion {
+    0% {
+        transform: translateX(-2px);
+    }
+    100% {
+        transform: translateX(2px);
+    }
+}
+
+@media screen and (max-width:768px) {
+    #instrument{
+        width: 368px
+    }
+
+    .kalimbax-times-device{
+        gap: 5px;
+    }
+}

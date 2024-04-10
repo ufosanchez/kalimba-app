@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+    <script src="https://kit.fontawesome.com/98efbca3c9.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header id="header" class="main-padding">
+        <a href=""><img src="./images/SURmUN-main-logo.png" alt="SURmUN Main Logo" class="main-logo"></a>
+        <nav>
+            <ul class="menu">
+                <li><a href="">About SURmUN</a></li>
+                <li><a href="">Versions</a></li>
+                <li><a href="">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="instrument">
+            <h1 id="title-kalimbax">KalimbaX</h1>
+            <div class="kalimbax-times">
+                <div class="play-stop">
+                    <div>
+                        <span class="fa-solid fa-play" id="playButton"></span>
+                        <span class="fa-solid fa-stop reset-music" id="resetButton"></span>
+                    </div>
+                    <div>
+                        <span class="fa-solid fa-share"></span>
+                        <span class="fa-solid fa-upload"></span>
+                        <span class="fa-solid fa-gear"></span>
+                    </div>
+                </div>
+                <div class="display-kalimbax">
+                    <div>
+                        <img src="./images/button.png" alt="button" class="button-device">
+                        <div class="sustain">
+                            <label for="">Sustain</label>
+                            <input type="number" value="100" class="input"/>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <label for="">Sound library</label>
+                            <br>
+                            <select name="" id=""  class="instrument-scale">
+                                <option value="Kalimba">Kalimba</option>
+                                <option value="Piano">Piano</option>
+                                <option value="Drums">Drums</option>
+                                <option value="Harmonica">Harmonica</option>
+                                <option value="Guitar">Guitar</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="">Scale</label>
+                            <br>
+                            <select name="" id=""  class="instrument-scale">
+                                <option value="Major">Major</option>
+                                <option value="Natural">Natural</option>
+                                <option value="Dorian">Dorian</option>
+                                <option value="Melodic">Melodic</option>
+                                <option value="Blues">Blues</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="root-note">
+                        <div>
+                            <label for="">Root note</label>
+                            <select name="" id="" class="instrument-root">
+                                <option value="C">C</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="">Motion sensing</label>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span> 
+                            </label>
+                        </div>                        
+                    </div>
+                </div>
+                <div class="kalimbax-times-device">
+                    <div data-note="C5" class="kalimba" id="lamellas-1"><div>B</div></div>
+                    <div data-note="A4" class="kalimba" id="lamellas-2"><div>F#</div></div>
+                    <div data-note="F4" class="kalimba" id="lamellas-3"><div>D#</div></div>
+                    <div data-note="D4" class="kalimba" id="lamellas-4"><div>B</div></div>
+                    <div data-note="C4" class="kalimba" id="lamellas-5"><div>E</div></div>
+                    <div data-note="E4" class="kalimba" id="lamellas-6"><div>B</div></div>
+                    <div data-note="G4" class="kalimba" id="lamellas-7"><div>D#</div></div>
+                    <div data-note="B4" class="kalimba" id="lamellas-8"><div>F#</div></div>
+                    <div data-note="D5" class="kalimba" id="lamellas-9"><div>B</div></div>
+                </div>
+            </div>
+
+            <audio id="C5" src="./notes/C5.mp3"></audio>
+            <audio id="A4" src="./notes/A4.mp3"></audio>
+            <audio id="F4" src="./notes/F4.mp3"></audio>
+            <audio id="D4" src="./notes/D4.mp3"></audio>
+            <audio id="C4" src="./notes/C4.mp3"></audio>
+            <audio id="E4" src="./notes/E4.mp3"></audio>
+            <audio id="G4" src="./notes/G4.mp3"></audio>
+            <audio id="B4" src="./notes/B4.mp3"></audio>
+            <audio id="D5" src="./notes/D5.mp3"></audio>
+        </section>
+
+    </main>
+</body>
+</html>
