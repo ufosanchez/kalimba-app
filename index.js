@@ -11,6 +11,27 @@ window.onload = function (){
     const playRecord = document.getElementById("playButton");
     const resetRecord = document.getElementById("resetButton");
 
+    var dropdownInstrument = document.getElementById("dropdown_instrument");
+
+    /* TIMES */
+    var timeC5 = document.getElementById("C5");
+    /* TIMES */
+
+    dropdownInstrument.onchange = newInstrument;
+
+    function newInstrument(){
+        console.log(dropdownInstrument.value);
+        
+        var audioElements = document.getElementsByTagName("audio");
+
+        for (var i = 0; i < audioElements.length; i++) {
+            var audioElement = audioElements[i];
+            audioElement.src = "./notes/" + dropdownInstrument.value + "/" + audioElement.id + ".mp3";
+            audioElement.load();
+          }
+    }
+
+
     playRecord.onclick = playMusic;
     resetRecord.onclick = resetMusic;
 
