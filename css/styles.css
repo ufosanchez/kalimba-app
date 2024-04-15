@@ -305,6 +305,8 @@ input:checked + .slider:before {
 }
 
 .vibrando {
+    color: #9d0208;
+    font-weight: bold;
     animation: vibracion 0.3s ease infinite alternate;
 }
 
